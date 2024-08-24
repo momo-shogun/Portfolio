@@ -13,7 +13,7 @@ function Header() {
           <X className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 drop-shadow-md" />
         </a>
         <Badge variant="outline" className="text-sm font-bold sm:text-md">
-          v1.0
+          v1.5
         </Badge>
       </div>
       <div>
