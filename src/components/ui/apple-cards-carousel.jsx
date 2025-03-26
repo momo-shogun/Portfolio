@@ -208,12 +208,7 @@ export const Card = ({ card, index, layout = false }) => {
               >
                 {card.title}
               </motion.p>
-              {hovered && (
-                <div className="absolute inset-0 z-50 flex items-center justify-center bg-black/60">
-                  <div className="p-4 text-white">asd</div>
-                </div>
-              )}
-              {console.log(hovered)}
+              
             </motion.div>
           </div>
         )}
@@ -228,16 +223,16 @@ export const Card = ({ card, index, layout = false }) => {
         transition={{ type: "spring", stiffness: 200, damping: 10 }}
       >
         <div className="absolute inset-x-0 top-0 z-30 h-full pointer-events-none bg-gradient-to-b from-black/50 via-transparent to-transparent" />
-        <div className="relative z-40 p-8">
+        <div className="relative z-40 p-8 w-full">
           <motion.p
             layoutId={layout ? `category-${card.category}` : undefined}
-            className="font-sans text-2xl font-semibold text-left text-white md:text-3xl "
+            className="font-sans text-2xl font-semibold text-white md:text-3xl bg-[#4F1C51] rounded-lg text-center " 
           >
             {card.category}
           </motion.p>
           <motion.p
             layoutId={layout ? `title-${card.title}` : undefined}
-            className="text-white text-xl md:text-xl font-semibold max-w-xs text-left [text-wrap:balance] font-sans mt-2"
+            className="text-[#D6CFB4] text-xl md:text-xl font-semibold max-w-xs text-left [text-wrap:balance] font-sans mt-6 "
           >
             {card.title}
           </motion.p>
@@ -245,10 +240,10 @@ export const Card = ({ card, index, layout = false }) => {
             <motion.div
               className="mt-4 text-left"
               initial={{ opacity: 0 }}
-              animate={{ opacity: hovered ? 1 : 0 }}
+              animate={{ opacity: 1 }}
               transition={{ duration: 0.3 }}
             >
-              {hovered && card.content}
+              {true && card.content}
             </motion.div>
           </div>
         </div>
@@ -256,7 +251,7 @@ export const Card = ({ card, index, layout = false }) => {
           src={card.src}
           alt={card.title}
           fill
-          className="absolute inset-0 z-10 object-cover w-full h-full"
+          className="absolute inset-0 z-10 object-contain w-full h-full"
         />
       </motion.button>
     </>
