@@ -15,7 +15,7 @@ export function ProjectCarousel() {
   ));
 
   return (
-    <div className="w-full h-full pb-20 ">
+    <div className="w-full h-full ">
       <Carousel items={cards} />
     </div>
   );

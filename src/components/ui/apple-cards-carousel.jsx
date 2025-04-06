@@ -198,13 +198,13 @@ export const Card = ({ card, index, layout = false }) => {
               </button>
               <motion.p
                 layoutId={layout ? `category-${card.title}` : undefined}
-                className="text-base font-medium text-black dark:text-white"
+                className="text-sm md:text-base font-medium text-black dark:text-white"
               >
                 {card.category}
               </motion.p>
               <motion.p
                 layoutId={layout ? `title-${card.title}` : undefined}
-                className="mt-4 text-2xl font-semibold md:text-5xl text-neutral-700 dark:text-white"
+                className="mt-4 text-xs font-semibold md:text-5xl text-neutral-700 dark:text-white"
               >
                 {card.title}
               </motion.p>
@@ -226,13 +226,13 @@ export const Card = ({ card, index, layout = false }) => {
         <div className="relative z-40 p-8 w-full">
           <motion.p
             layoutId={layout ? `category-${card.category}` : undefined}
-            className="font-sans text-2xl font-semibold text-white md:text-3xl bg-[#4F1C51] rounded-lg text-center " 
+            className="font-sans text-md font-semibold text-white md:text-3xl bg-[#4F1C51] rounded-lg text-center " 
           >
             {card.category}
           </motion.p>
           <motion.p
             layoutId={layout ? `title-${card.title}` : undefined}
-            className="text-[#D6CFB4] text-xl md:text-xl font-semibold max-w-xs text-left [text-wrap:balance] font-sans mt-6 "
+            className="text-[#D6CFB4] text-xs md:text-xl font-semibold max-w-xs text-left [text-wrap:balance] font-sans mt-6 "
           >
             {card.title}
           </motion.p>
